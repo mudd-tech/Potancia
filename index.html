@@ -1,55 +1,904 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090907">
 <meta name="description" content="POTANICA — عناية مستوحاة من الطبيعة، بهوية مصرية ولمسة من الفخامة.">
 <title>بوتانيكا | عناية من الطبيعة</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#090907;--panel:#12120f;--gold:#d7ad5a;--gold2:#f0d69a;--cream:#f6f0e4;--muted:#bdb6a6;--green:#647c58;--line:rgba(215,173,90,.25)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'Cairo',sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1160px,92%);margin:auto}.topline{height:3px;background:linear-gradient(90deg,#293a27,var(--gold),#e9d49d,var(--gold),#293a27)}
-header{position:sticky;top:0;z-index:20;background:rgba(9,9,7,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.brand{display:flex;align-items:center;gap:11px}.brand img{width:48px;height:48px;object-fit:cover;border-radius:50%;border:1px solid var(--gold)}.brand strong{font-family:'Playfair Display',serif;letter-spacing:2px;color:var(--gold2);font-size:1.25rem}.links{display:flex;gap:24px;color:#ded6c6;font-size:.92rem}.links a:hover{color:var(--gold2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);border-radius:999px;padding:10px 19px;color:#17130a;background:linear-gradient(135deg,var(--gold2),var(--gold));font-weight:800;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
-.hero{position:relative;overflow:hidden;padding:70px 0 80px;background:radial-gradient(ellipse at 80% 30%,rgba(74,94,56,.24),transparent 35%),radial-gradient(ellipse at 10% 10%,rgba(215,173,90,.13),transparent 30%),var(--bg)}.hero:before{content:'✦';position:absolute;left:8%;top:10%;font-size:7rem;color:rgba(215,173,90,.08)}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{color:var(--gold2);font-size:.84rem;letter-spacing:2px;font-weight:700}.hero h1{font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.25;margin:12px 0 20px;font-weight:700}.hero h1 span{color:var(--gold2)}.hero p{color:#c9c2b5;max-width:570px;font-size:1.05rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn-outline{background:transparent;color:var(--gold2)}.hero-note{font-size:.83rem!important;color:#a69e8f!important;margin-top:18px}.hero-art{position:relative;max-width:440px;margin:auto}.hero-art img{width:100%;display:block;border-radius:50%;border:1px solid rgba(215,173,90,.55);box-shadow:0 0 0 12px rgba(215,173,90,.035),0 25px 90px #000}.orbit{position:absolute;inset:-18px;border:1px solid rgba(215,173,90,.18);border-radius:50%;pointer-events:none}.leaf{position:absolute;color:var(--gold);font-size:2rem;opacity:.65}.leaf.one{right:-16px;top:18%}.leaf.two{left:-12px;bottom:15%}
-.trust{border-block:1px solid var(--line);background:#0e0e0b}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:22px 0;text-align:center}.trust-item strong{display:block;color:var(--gold2);font-size:1rem}.trust-item span{font-size:.82rem;color:var(--muted)}section{padding:76px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 38px}.section-head .eyebrow{display:block}.section-head h2{font-size:clamp(1.8rem,3vw,2.8rem);margin:7px 0;color:var(--cream)}.section-head p{color:var(--muted);margin:0}.products{background:linear-gradient(180deg,#0a0a08,#10100c 50%,#0a0a08)}.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:900px;margin:auto}.product-card{background:linear-gradient(150deg,#171711,#0d0d0a);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s}.product-card:hover{transform:translateY(-5px);border-color:rgba(215,173,90,.55)}.product-image{height:340px;background:#050505;display:flex;align-items:center;justify-content:center;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:contain;transition:transform .4s}.product-card:hover .product-image img{transform:scale(1.035)}.product-info{padding:23px}.tag{display:inline-block;color:#b9cba8;background:rgba(100,124,88,.15);border:1px solid rgba(100,124,88,.3);padding:3px 10px;border-radius:20px;font-size:.75rem}.product-info h3{font-size:1.35rem;margin:10px 0 5px;color:var(--gold2)}.product-info p{color:#bdb6a8;font-size:.92rem;margin:0 0 18px}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.price{color:#f0d69a;font-weight:800}.price small{display:block;color:#8f887b;font-size:.7rem;font-weight:400}.order-btn{padding:8px 15px;font-size:.88rem}
-.coming{margin:30px auto 0;max-width:900px;padding:22px 26px;border:1px dashed rgba(215,173,90,.35);border-radius:18px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:rgba(255,255,255,.02)}.coming h3{margin:0;color:var(--gold2)}.coming p{margin:3px 0 0;color:var(--muted);font-size:.9rem}.coming-badge{white-space:nowrap;color:#b7c9a6;border:1px solid rgba(100,124,88,.45);padding:5px 13px;border-radius:30px;font-size:.8rem}
-.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.about-logo{border:1px solid var(--line);border-radius:24px;overflow:hidden;max-width:400px;margin:auto;box-shadow:0 20px 70px rgba(0,0,0,.4)}.about-logo img{display:block;width:100%}.about-copy h2{font-size:2.2rem;line-height:1.4;margin:8px 0 15px}.about-copy h2 span{color:var(--gold2)}.about-copy p{color:#c3bcaf}.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.value{border:1px solid var(--line);border-radius:14px;padding:13px;background:rgba(255,255,255,.025)}.value b{color:var(--gold2);display:block}.value span{color:var(--muted);font-size:.84rem}
-.contact{background:radial-gradient(ellipse at center,rgba(100,124,88,.16),transparent 55%),#10100c}.contact-box{border:1px solid var(--line);border-radius:24px;padding:36px;text-align:center;max-width:790px;margin:auto;background:rgba(0,0,0,.2)}.contact-box h2{margin:4px 0 10px;font-size:2rem}.contact-box p{color:var(--muted);margin:0 auto 22px;max-width:570px}.contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.notice{font-size:.78rem!important;margin-top:17px!important;color:#918a7c!important}
-footer{border-top:1px solid var(--line);padding:25px 0;color:#a8a091;font-size:.83rem}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-brand{font-family:'Playfair Display',serif;color:var(--gold2);letter-spacing:2px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#eee5d2;color:#17130a;padding:12px 20px;border-radius:12px;box-shadow:0 10px 35px #0008;opacity:0;pointer-events:none;transition:.25s;z-index:40;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:760px){.links{display:none}.hero{padding:48px 0 58px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero-art{width:min(78%,330px);grid-row:1}.hero-copy{text-align:center}.hero-copy p{margin-inline:auto}.hero-actions{justify-content:center}.trust-grid{gap:6px}.trust-item span{font-size:.72rem}.product-grid{grid-template-columns:1fr;max-width:470px}.product-image{height:320px}.about-grid{grid-template-columns:1fr;gap:30px}.about-logo{max-width:290px}.about-copy{text-align:center}.values{text-align:right}.coming{align-items:flex-start;flex-direction:column}.contact-box{padding:26px 18px}section{padding:58px 0}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+:root {
+  --bg: #090907;
+  --panel: #12120f;
+  --gold: #d7ad5a;
+  --gold2: #f0d69a;
+  --cream: #f6f0e4;
+  --muted: #bdb6a6;
+  --green: #647c58;
+  --line: rgba(215,173,90,.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+.topline {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #293a27,
+    var(--gold),
+    #e9d49d,
+    var(--gold),
+    #293a27
+  );
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(9,9,7,.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+}
+
+.brand strong {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  color: var(--gold2);
+  font-size: 1.25rem;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  color: #ded6c6;
+  font-size: .92rem;
+}
+
+.links a:hover {
+  color: var(--gold2);
+}
+
+.nav-cta,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 10px 19px;
+  color: #17130a;
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.nav-cta:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold2);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0 80px;
+  background:
+    radial-gradient(ellipse at 80% 30%, rgba(74,94,56,.24), transparent 35%),
+    radial-gradient(ellipse at 10% 10%, rgba(215,173,90,.13), transparent 30%),
+    var(--bg);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--gold2);
+  font-size: .84rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  line-height: 1.25;
+  margin: 12px 0 20px;
+}
+
+.hero h1 span {
+  color: var(--gold2);
+}
+
+.hero p {
+  color: #c9c2b5;
+  max-width: 570px;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 27px;
+}
+
+.hero-note {
+  font-size: .83rem !important;
+  color: #a69e8f !important;
+  margin-top: 18px;
+}
+
+.hero-art {
+  position: relative;
+  max-width: 440px;
+  margin: auto;
+}
+
+.hero-art img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid rgba(215,173,90,.55);
+  box-shadow: 0 0 0 12px rgba(215,173,90,.035), 0 25px 90px #000;
+}
+
+.trust {
+  border-block: 1px solid var(--line);
+  background: #0e0e0b;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.trust-item strong {
+  display: block;
+  color: var(--gold2);
+}
+
+.trust-item span {
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+section {
+  padding: 76px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 690px;
+  margin: 0 auto 38px;
+}
+
+.section-head h2 {
+  font-size: clamp(1.8rem,3vw,2.8rem);
+  margin: 7px 0;
+  color: var(--cream);
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+.products {
+  background: linear-gradient(180deg,#0a0a08,#10100c 50%,#0a0a08);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.product-card {
+  background: linear-gradient(150deg,#171711,#0d0d0a);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(215,173,90,.55);
+}
+
+.product-image {
+  height: 340px;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 23px;
+}
+
+.tag {
+  display: inline-block;
+  color: #b9cba8;
+  background: rgba(100,124,88,.15);
+  border: 1px solid rgba(100,124,88,.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: .75rem;
+}
+
+.product-info h3 {
+  font-size: 1.35rem;
+  margin: 10px 0 5px;
+  color: var(--gold2);
+}
+
+.product-info p {
+  color: #bdb6a8;
+  font-size: .92rem;
+  margin: 0 0 18px;
+}
+
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.price {
+  color: #f0d69a;
+  font-weight: 800;
+}
+
+.price small {
+  display: block;
+  color: #8f887b;
+  font-size: .7rem;
+  font-weight: 400;
+}
+
+.order-btn {
+  padding: 8px 15px;
+  font-size: .88rem;
+}
+
+.coming {
+  margin: 30px auto 0;
+  max-width: 900px;
+  padding: 22px 26px;
+  border: 1px dashed rgba(215,173,90,.35);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255,255,255,.02);
+}
+
+.coming h3 {
+  margin: 0;
+  color: var(--gold2);
+}
+
+.coming p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.coming-badge {
+  white-space: nowrap;
+  color: #b7c9a6;
+  border: 1px solid rgba(100,124,88,.45);
+  padding: 5px 13px;
+  border-radius: 30px;
+  font-size: .8rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-logo {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 400px;
+  margin: auto;
+}
+
+.about-logo img {
+  display: block;
+  width: 100%;
+}
+
+.about-copy h2 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  margin: 8px 0 15px;
+}
+
+.about-copy h2 span {
+  color: var(--gold2);
+}
+
+.about-copy p {
+  color: #c3bcaf;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.value {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 13px;
+  background: rgba(255,255,255,.025);
+}
+
+.value b {
+  color: var(--gold2);
+  display: block;
+}
+
+.value span {
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.contact {
+  background: radial-gradient(ellipse at center,rgba(100,124,88,.16),transparent 55%),#10100c;
+}
+
+.contact-box {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 36px;
+  text-align: center;
+  max-width: 790px;
+  margin: auto;
+  background: rgba(0,0,0,.2);
+}
+
+.contact-box h2 {
+  margin: 4px 0 10px;
+  font-size: 2rem;
+}
+
+.contact-box p {
+  color: var(--muted);
+  margin: 0 auto 22px;
+  max-width: 570px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.notice {
+  font-size: .78rem !important;
+  margin-top: 17px !important;
+  color: #918a7c !important;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+  color: #a8a091;
+  font-size: .83rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display',serif;
+  color: var(--gold2);
+  letter-spacing: 2px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,20px);
+  background: #eee5d2;
+  color: #17130a;
+  padding: 12px 20px;
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .25s;
+  z-index: 40;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%,0);
+}
+
+@media(max-width:760px) {
+  .links {
+    display: none;
+  }
+
+  .hero {
+    padding: 48px 0 58px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-art {
+    width: min(78%,330px);
+    grid-row: 1;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy p {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .trust-grid {
+    gap: 6px;
+  }
+
+  .trust-item span {
+    font-size: .72rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    max-width: 470px;
+  }
+
+  .product-image {
+    height: 320px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-logo {
+    max-width: 290px;
+  }
+
+  .about-copy {
+    text-align: center;
+  }
+
+  .values {
+    text-align: right;
+  }
+
+  .coming {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-box {
+    padding: 26px 18px;
+  }
+
+  section {
+    padding: 58px 0;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *:before,
+  *:after {
+    transition: none !important;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div class="topline"></div>
-<header><div class="wrap nav"><a class="brand" href="#home" aria-label="POTANICA الصفحة الرئيسية"><img src="assets/potanica-logo.jpg" alt="شعار Potanica"><strong>POTANICA</strong></a><nav class="links"><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#about">عن البراند</a><a href="#contact">الطلبات</a></nav><a class="nav-cta" href="#products">اكتشفي المنتجات <span>↙</span></a></div></header>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="POTANICA الصفحة الرئيسية">
+      <img src="./potanica-logo.jpg" alt="شعار Potanica">
+      <strong>POTANICA</strong>
+    </a>
+
+    <nav class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">عن البراند</a>
+      <a href="#contact">الطلبات</a>
+    </nav>
+
+    <a class="nav-cta" href="#products">اكتشفي المنتجات ↙</a>
+  </div>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-grid"><div class="hero-copy"><span class="eyebrow">عناية مستوحاة من الطبيعة · صنع في مصر</span><h1>جمال مستوحى من <span>الطبيعة</span></h1><p>اكتشفي عالم POTANICA، حيث تلتقي المكونات الطبيعية بالهوية المصرية واللمسة الفاخرة. عناية مختارة لتكون جزءًا من روتينك اليومي.</p><div class="hero-actions"><a class="btn" href="#products">تصفحي المنتجات <span>←</span></a><a class="btn btn-outline" href="#about">اكتشفي حكايتنا</a></div><p class="hero-note">عناية بروح الطبيعة، بتفاصيل تستحق الاهتمام.</p></div><div class="hero-art"><div class="orbit"></div><span class="leaf one">✦</span><img src="assets/potanica-logo.jpg" alt="هوية POTANICA الذهبية على خلفية سوداء"><span class="leaf two">✧</span></div></div></section>
-<div class="trust"><div class="wrap trust-grid"><div class="trust-item"><strong>هوية مصرية</strong><span>مستوحاة من إرثنا</span></div><div class="trust-item"><strong>عناية مستوحاة من الطبيعة</strong><span>اختيارات تهتم بالتفاصيل</span></div><div class="trust-item"><strong>تجربة شخصية</strong><span>اسألي عن المنتج المناسب لكِ</span></div></div></div>
-<section class="products" id="products"><div class="wrap"><div class="section-head"><span class="eyebrow">مجموعة بوتانيكا</span><h2>اكتشفي منتجاتنا</h2><p>اختاري منتجك المفضل، وتواصلي معنا لمعرفة السعر والتفاصيل وطرق الطلب.</p></div><div class="product-grid">
-<article class="product-card"><div class="product-image"><img src="assets/hair-body-oil.jpg" alt="زيت POTANICA للشعر والجسم" loading="lazy"></div><div class="product-info"><span class="tag">عناية بالشعر والجسم</span><h3>زيت الشعر والجسم</h3><p>زيت للعناية بالشعر والجسم ضمن مجموعة POTANICA. تواصلي معنا لمعرفة المكونات وطريقة الاستخدام المناسبة.</p><div class="product-bottom"><div class="price">السعر يُعلن قريبًا<small>سيُضاف السعر بعد تأكيده</small></div><button class="btn order-btn" onclick="orderProduct('زيت الشعر والجسم')">اطلبي الآن ↙</button></div></div></article>
-<article class="product-card"><div class="product-image"><img src="assets/rosemary-argan-oil.jpg" alt="زيت POTANICA بالروزماري والأرجان" loading="lazy"></div><div class="product-info"><span class="tag">عناية بالشعر</span><h3>زيت الروزماري والأرجان</h3><p>تركيبة زيتية يذكر البراند أنها تضم زيت الروزماري والأرجان. اسألي عن المكونات الكاملة والتفاصيل قبل الاستخدام.</p><div class="product-bottom"><div class="price">السعر يُعلن قريبًا<small>سيُضاف السعر بعد تأكيده</small></div><button class="btn order-btn" onclick="orderProduct('زيت الروزماري والأرجان')">اطلبي الآن ↙</button></div></div></article>
-</div><div class="coming"><div><h3>قريبًا من POTANICA ✨</h3><p>تنت البشرة — منتج جديد قيد التجهيز. تابعي الصفحة لمعرفة موعد الإطلاق والتفاصيل.</p></div><span class="coming-badge">قريبًا</span></div></div></section>
-<section id="about"><div class="wrap about-grid"><div class="about-logo"><img src="assets/potanica-logo.jpg" alt="شعار Potanica"></div><div class="about-copy"><span class="eyebrow">حكايتنا</span><h2>من الطبيعة، <span>بروح مصرية</span></h2><p>POTANICA براند مصري ناشئ يهتم بمنتجات العناية المستوحاة من الطبيعة، بهوية بصرية مستلهمة من الحضارة المصرية القديمة. هدفنا أن نقدم تجربة عناية جميلة وواضحة، مع الاهتمام بتفاصيل المنتج وطريقة استخدامه.</p><p>لأن كل روتين مختلف، يسعدنا الرد على أسئلتك حول المنتجات ومكوناتها وطريقة استخدامها.</p><div class="values"><div class="value"><b>🌿 روح نباتية</b><span>إلهام من الطبيعة</span></div><div class="value"><b>𓂀 هوية مميزة</b><span>لمسة مصرية معاصرة</span></div><div class="value"><b>✦ اهتمام بالتفاصيل</b><span>عرض واضح للمنتجات</span></div><div class="value"><b>♡ تواصل مباشر</b><span>اسألي قبل الطلب</span></div></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><span class="eyebrow">يسعدنا تواصلكِ معنا</span><h2>جاهزة تطلبي؟</h2><p>اختاري المنتج واضغطي على «اطلبي الآن» لبدء طلبك. حاليًا يمكنك التواصل مع POTANICA عبر صفحة فيسبوك، وسيتم ربط الطلبات المباشرة بواتساب عند إضافة رقم البراند.</p><div class="contact-actions"><a class="btn" href="https://www.facebook.com/share/1Gut3fmKe9/?mibextid=wwXIfr" target="_blank" rel="noopener">تواصلي عبر فيسبوك ↗</a><a class="btn btn-outline" href="#products">اختاري منتجك</a></div><p class="notice">الأسعار وتفاصيل التوصيل ستُحدّث فور تأكيدها من إدارة البراند.</p></div></div></section>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <span class="eyebrow">عناية مستوحاة من الطبيعة · صنع في مصر</span>
+
+      <h1>جمال مستوحى من <span>الطبيعة</span></h1>
+
+      <p>
+        اكتشفي عالم POTANICA، حيث تلتقي المكونات الطبيعية
+        بالهوية المصرية واللمسة الفاخرة. عناية مختارة لتكون
+        جزءًا من روتينك اليومي.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#products">تصفحي المنتجات ←</a>
+        <a class="btn btn-outline" href="#about">اكتشفي حكايتنا</a>
+      </div>
+
+      <p class="hero-note">
+        عناية بروح الطبيعة، بتفاصيل تستحق الاهتمام.
+      </p>
+    </div>
+
+    <div class="hero-art">
+      <img src="./potanica-logo.jpg" alt="هوية POTANICA">
+    </div>
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <strong>هوية مصرية</strong>
+      <span>مستوحاة من إرثنا</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>عناية مستوحاة من الطبيعة</strong>
+      <span>اختيارات تهتم بالتفاصيل</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>تجربة شخصية</strong>
+      <span>اسألي عن المنتج المناسب لكِ</span>
+    </div>
+  </div>
+</div>
+
+<section class="products" id="products">
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="eyebrow">مجموعة بوتانيكا</span>
+      <h2>اكتشفي منتجاتنا</h2>
+      <p>اختاري منتجك المفضل، وتواصلي معنا لمعرفة السعر والتفاصيل وطرق الطلب.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            src="./hair-body-oil.jpg"
+            alt="زيت POTANICA للشعر والجسم"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x600/12120f/d7ad5a?text=POTANICA';"
+          >
+        </div>
+
+        <div class="product-info">
+          <span class="tag">عناية بالشعر والجسم</span>
+          <h3>زيت الشعر والجسم</h3>
+
+          <p>
+            زيت للعناية بالشعر والجسم ضمن مجموعة POTANICA.
+            تواصلي معنا لمعرفة المكونات وطريقة الاستخدام المناسبة.
+          </p>
+
+          <div class="product-bottom">
+            <div class="price">
+              السعر يُعلن قريبًا
+              <small>سيُضاف السعر بعد تأكيده</small>
+            </div>
+
+            <button class="btn order-btn" onclick="orderProduct('زيت الشعر والجسم')">
+              اطلبي الآن ↙
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img
+            src="./rosemary-argan-oil.jpg"
+            alt="زيت POTANICA بالروزماري والأرجان"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='https://placehold.co/600x600/12120f/d7ad5a?text=POTANICA';"
+          >
+        </div>
+
+        <div class="product-info">
+          <span class="tag">عناية بالشعر</span>
+          <h3>زيت الروزماري والأرجان</h3>
+
+          <p>
+            تركيبة زيتية يذكر البراند أنها تضم زيت الروزماري والأرجان.
+            اسألي عن المكونات الكاملة والتفاصيل قبل الاستخدام.
+          </p>
+
+          <div class="product-bottom">
+            <div class="price">
+              السعر يُعلن قريبًا
+              <small>سيُضاف السعر بعد تأكيده</small>
+            </div>
+
+            <button class="btn order-btn" onclick="orderProduct('زيت الروزماري والأرجان')">
+              اطلبي الآن ↙
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="coming">
+      <div>
+        <h3>قريبًا من POTANICA ✨</h3>
+        <p>تنت البشرة — منتج جديد قيد التجهيز. تابعي الصفحة لمعرفة موعد الإطلاق والتفاصيل.</p>
+      </div>
+
+      <span class="coming-badge">قريبًا</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+
+    <div class="about-logo">
+      <img src="./potanica-logo.jpg" alt="شعار Potanica">
+    </div>
+
+    <div class="about-copy">
+      <span class="eyebrow">حكايتنا</span>
+
+      <h2>من الطبيعة، <span>بروح مصرية</span></h2>
+
+      <p>
+        POTANICA براند مصري ناشئ يهتم بمنتجات العناية
+        المستوحاة من الطبيعة، بهوية بصرية مستلهمة من الحضارة
+        المصرية القديمة. هدفنا أن نقدم تجربة عناية جميلة وواضحة،
+        مع الاهتمام بتفاصيل المنتج وطريقة استخدامه.
+      </p>
+
+      <p>
+        لأن كل روتين مختلف، يسعدنا الرد على أسئلتك حول المنتجات
+        ومكوناتها وطريقة استخدامها.
+      </p>
+
+      <div class="values">
+        <div class="value">
+          <b>🌿 روح نباتية</b>
+          <span>إلهام من الطبيعة</span>
+        </div>
+
+        <div class="value">
+          <b>𓂀 هوية مميزة</b>
+          <span>لمسة مصرية معاصرة</span>
+        </div>
+
+        <div class="value">
+          <b>✦ اهتمام بالتفاصيل</b>
+          <span>عرض واضح للمنتجات</span>
+        </div>
+
+        <div class="value">
+          <b>♡ تواصل مباشر</b>
+          <span>اسألي قبل الطلب</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+
+    <div class="contact-box">
+      <span class="eyebrow">يسعدنا تواصلكِ معنا</span>
+
+      <h2>جاهزة تطلبي؟</h2>
+
+      <p>
+        اختاري المنتج واضغطي على «اطلبي الآن» لبدء طلبك.
+        يمكنك التواصل مع POTANICA عبر صفحة فيسبوك.
+      </p>
+
+      <div class="contact-actions">
+        <a
+          class="btn"
+          href="https://www.facebook.com/share/1Gut3fmKe9/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener"
+        >
+          تواصلي عبر فيسبوك ↗
+        </a>
+
+        <a class="btn btn-outline" href="#products">
+          اختاري منتجك
+        </a>
+      </div>
+
+      <p class="notice">
+        الأسعار وتفاصيل التوصيل ستُحدّث فور تأكيدها من إدارة البراند.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 </main>
-<footer><div class="wrap footer-row"><span class="footer-brand">POTANICA</span><span>عناية مستوحاة من الطبيعة · صنع في مصر</span><span>تصميم وتطوير <b style="color:var(--gold2)">Tapio</b> ♥</span></div></footer>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="footer-brand">POTANICA</span>
+    <span>عناية مستوحاة من الطبيعة · صنع في مصر</span>
+    <span>تصميم وتطوير <b style="color:var(--gold2)">Tapio</b> ♥</span>
+  </div>
+</footer>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-// لإضافة واتساب لاحقًا: استبدلي القيمة الفارغة برقم دولي بدون + أو مسافات، مثال: 2010XXXXXXXX
 const WHATSAPP_NUMBER = '';
 const FACEBOOK_PAGE = 'https://www.facebook.com/share/1Gut3fmKe9/?mibextid=wwXIfr';
-function orderProduct(product){
- const message = `مرحبًا POTANICA، أريد الاستفسار وطلب: ${product}. من فضلكم أرسلوا السعر والتفاصيل.`;
- if(WHATSAPP_NUMBER.trim()){
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener');
- }else{
-  const toast=document.getElementById('toast');
-  toast.textContent='رقم واتساب البراند لم يُضف بعد. سيتم فتح صفحة فيسبوك لإتمام الاستفسار.';
-  toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),3500);
-  setTimeout(()=>window.open(FACEBOOK_PAGE,'_blank','noopener'),500);
- }
+
+function orderProduct(product) {
+  const message =
+    `مرحبًا POTANICA، أريد الاستفسار وطلب: ${product}. من فضلكم أرسلوا السعر والتفاصيل.`;
+
+  if (WHATSAPP_NUMBER.trim()) {
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+      '_blank'
+    );
+  } else {
+    const toast = document.getElementById('toast');
+
+    toast.textContent =
+      'رقم واتساب البراند لم يُضف بعد. سيتم فتح صفحة فيسبوك للاستفسار.';
+
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3500);
+
+    setTimeout(() => {
+      window.open(FACEBOOK_PAGE, '_blank');
+    }, 500);
+  }
 }
 </script>
-</body></html>
+
+</body>
+</html>
